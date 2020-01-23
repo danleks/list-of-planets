@@ -38,7 +38,7 @@ const StyledIcon = styled.img`
 
 const Footer = () => (
     <StyledFooter>
-        <StyledFooterText>Made with love by <StyledFooterLink href='https://github.com/danleks' target='_blank' rel="noopener noreferrer">danleks</StyledFooterLink>. Illustrations by <StyledFooterLink href='https://icons8.com' target='_blank' rel="noopener noreferrer">Ouch.pics</StyledFooterLink> and <StyledFooterLink href='https://absurd.design/' target='_blank' rel="noopener noreferrer">absurd.design</StyledFooterLink></StyledFooterText>
+        <StyledFooterText>Made with love by <StyledFooterLink href='https://github.com/danleks' target='_blank' rel="noopener noreferrer">danleks</StyledFooterLink>. Illustrations by <StyledFooterLink href='https://icons8.com' target='_blank' rel="noopener noreferrer">Ouch.pics</StyledFooterLink> and <StyledFooterLink href='https://absurd.design/' target='_blank' rel="noopener noreferrer">abssurd.design</StyledFooterLink></StyledFooterText>
     </StyledFooter>
 );
 
