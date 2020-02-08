@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -111,6 +112,16 @@ const Pagination = ({ planetsPerPage, totalPlanets, paginate, loadPlanetsPerPage
             </InnerWrapper>
         </StyledPagination>
     )
+};
+
+
+Pagination.propTypes = {
+    planetsPerPage: PropTypes.number.isRequired,
+    totalPlanets: PropTypes.number.isRequired, 
+    paginate: PropTypes.func.isRequired, 
+    loadPlanetsPerPage: PropTypes.func.isRequired, 
+    paginationStyling: PropTypes.number.isRequired, 
+    itemsPerPageStyling: PropTypes.number.isRequired,
 };
 
 export default Pagination;

@@ -31,11 +31,18 @@ const SectionWrapper = ({ type, page, children }) => (
 
 
 SectionWrapper.propTypes = {
+    type: PropTypes.string,
+    page: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
     ]).isRequired
 };
+
+SectionWrapper.defaultProps = {
+    type: '',
+    page: '',
+}
 
 
 export default SectionWrapper;

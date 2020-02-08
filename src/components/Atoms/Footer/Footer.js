@@ -32,9 +32,6 @@ const StyledFooterLink = styled.a`
     }
 `;
 
-const StyledIcon = styled.img`
-    display: inline-block;
-`;
 
 const Footer = () => (
     <StyledFooter>

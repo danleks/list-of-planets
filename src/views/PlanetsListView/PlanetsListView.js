@@ -17,6 +17,7 @@ import TableBodyCell from '../../components/Atoms/TableBodyCell/TableBodyCell';
 const ContentWrapper = styled.div`
     max-width: 90rem;
     width: 100%;
+    height: 100vh;
     margin: 8rem auto;
 
     ${({ theme }) => theme.mq.tablet} {
@@ -57,8 +58,8 @@ const PlanetsListView = () => {
                     <StyledLoader 
                         type="TailSpin"
                         color="hsla(0, 0%, 37%, 1)"
-                        height={100}
-                        width={100}
+                        height={80}
+                        width={80}
                         // timeout={3000} //3 secs 
                     />
                     :

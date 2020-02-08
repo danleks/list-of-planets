@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import SearchInput from '../../Atoms/SearchInput/SearchInput';
 import HomeIcon from '../../../assets/images/home.svg';
 import BackIcon from '../../../assets/images/back.svg';
 
@@ -31,5 +31,14 @@ const SectionHeader = ({ goto }) => (
         </Link>
     </StyledHeader>
 );
+
+
+SectionHeader.propTypes = {
+    goto: PropTypes.string,
+};
+
+SectionHeader.defaultProps = {
+    goto: '',
+};
 
 export default SectionHeader;

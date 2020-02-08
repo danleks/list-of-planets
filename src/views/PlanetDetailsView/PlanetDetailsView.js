@@ -1,7 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import Routes from '../../routes/routes';
 import AppContext from '../../components/Atoms/Context/Context';
 import StyledLoader from '../../components/Atoms/Loader/Loader';
 import SectionWrapper from '../../components/Atoms/SectionWrapper/SectionWrapper';
@@ -15,23 +13,13 @@ import SectionTitle from '../../components/Atoms/SectionTitle/SectionTitle';
 import SectionText from '../../components/Atoms/SectionText/SectionText';
 
 const MainWrapper = styled.div`
-    display: flex;
-    width: 125rem;
+    height: 100vh;
 `;
 
 const StyledSectionText = styled(SectionText)`
     margin: 3rem 0;
 `;
 
-const StyledText = styled.p`
-    margin-bottom: 5rem;
-    font-size: ${({ theme }) => theme.fontSize.m};
-`;
-
-const InnerWrapper = styled.div`
-    display: block;
-    flex: 1;
-`;
 
 const StyledTable = styled.table`
     border-collapse: collapse;
@@ -47,14 +35,6 @@ const StyledTableCell = styled.td`
     }
 `;
 
-const BackgroundImg = styled.div`
-    width: 100%;
-    height: 100%;
-    background-image: url(${({ pathUrl }) => pathUrl});
-    background-size: cover;
-    background-repeat: no-repeat;   
-    background-position: bottom;
-`;
 
 const PlanetDetailsView = ({ match }) => {
     const { currentPlanets } = useContext(AppContext);
@@ -69,13 +49,14 @@ const PlanetDetailsView = ({ match }) => {
 
     return (
         <SectionWrapper type='flex' page='details'>
+            <MainWrapper>
             <SectionHeader /> 
             {
                  planet === null ? <StyledLoader 
                  type="TailSpin"
                  color="hsla(0, 0%, 37%, 1)"
-                 height={100}
-                 width={100}
+                 height={80}
+                 width={80}
                  // timeout={3000} //3 secs 
              />
 
@@ -159,7 +140,7 @@ const PlanetDetailsView = ({ match }) => {
          </SectionContentWrapper>
 
             }
-      
+        </MainWrapper>
         </SectionWrapper>
     )};
 
