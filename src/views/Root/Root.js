@@ -21,13 +21,13 @@ const Root = () => {
   useEffect(() => {
       const fetchData = async () => {
           setLoading(true);
-          const result_page_1 = await axios.get('https://swapi.co/api/planets');
-          const result_page_2 = await axios.get('https://swapi.co/api/planets/?page=2');
-          const result_page_3 = await axios.get('https://swapi.co/api/planets/?page=3');
-          const result_page_4 = await axios.get('https://swapi.co/api/planets/?page=4');
-          const result_page_5 = await axios.get('https://swapi.co/api/planets/?page=5');
-          const result_page_6 = await axios.get('https://swapi.co/api/planets/?page=6');
-          const result_page_7 = await axios.get('https://swapi.co/api/planets/?page=7');
+          const result_page_1 = await axios.get('https://swapi.dev/api/planets');
+          const result_page_2 = await axios.get('https://swapi.dev/api/planets/?page=2');
+          const result_page_3 = await axios.get('https://swapi.dev/api/planets/?page=3');
+          const result_page_4 = await axios.get('https://swapi.dev/api/planets/?page=4');
+          const result_page_5 = await axios.get('https://swapi.dev/api/planets/?page=5');
+          const result_page_6 = await axios.get('https://swapi.dev/api/planets/?page=6');
+          const result_page_7 = await axios.get('https://swapi.dev/api/planets/?page=7');
 
           setPlanets([...result_page_1.data.results, ...result_page_2.data.results, ...result_page_3.data.results, ...result_page_4.data.results, ...result_page_5.data.results, ...result_page_6.data.results, ...result_page_7.data.results]);
           setLoading(false);
